@@ -10,8 +10,8 @@
 -- Hint: Use the nyc_census_blocks table
 
 -- TODO: Write your query below
-SELECT * FROM nyc_census_blocks
-SUM(asian_pop)
+SELECT SUM(popn_asian) AS asian_pop FROM nyc_census_blocks
+
 
 
 
