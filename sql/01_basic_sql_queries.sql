@@ -47,7 +47,7 @@ SELECT SUM(popn_total) AS manhattan_pop FROM nyc_census_blocks WHERE boroname = 
 
 -- TODO: Write your query below
 
-SELECT ((SUM(popn_black) / SUM(popn_total)) * 100.0) AS percentage_black from nyc_census_blocks GROUP BY boroname ORDER BY boroname
+SELECT boroname, ((SUM(popn_black) / SUM(popn_total)) * 100.0) AS percentage_black from nyc_census_blocks GROUP BY boroname ORDER BY boroname
 
 
 -- Exercise 4: What is the average population per census block in each borough?
