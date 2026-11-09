@@ -30,7 +30,7 @@ SELECT ST_Area(geom) AS new_brighton_area_sq_m FROM nyc_neighborhoods WHERE name
 
 -- TODO: Write your query below
 
-
+SELECT (ST_Area(ST_Union(geom)) / 4046.86) AS bronx_area_acres FROM nyc_neighborhoods WHERE boroname = 'The Bronx'
 
 
 -- Exercise 3: How many census blocks in New York City DO NOT have a hole in them?
