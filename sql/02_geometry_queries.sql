@@ -46,6 +46,7 @@ SELECT (ST_Area(ST_Union(geom)) / 4046.86) AS bronx_area_acres FROM nyc_neighbor
 
 -- TODO: Write your query below
 
+SELECT COUNT(*) AS no_hole_polygons from nyc_census_blocks where ST_NumInteriorRings(geom) = 0
 
 
 
