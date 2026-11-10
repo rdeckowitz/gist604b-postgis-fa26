@@ -63,7 +63,7 @@ SELECT COUNT(*) AS no_hole_polygons from nyc_census_blocks where ST_NumInteriorR
 
 -- TODO: Write your query below
 
-
+SELECT (SUM(ST_Length(geom)) / 1609.34) AS total_length_miles from nyc_streets
 
 
 -- Exercise 5: How long is '5th Ave' in meters?
