@@ -10,7 +10,7 @@
 
 -- TODO: Write your query below
 
-
+SELECT ST_AsText(geom) as queensboro from nyc_streets where name = 'Queensboro Brg'
 
 
 -- Exercise 2: What neighborhood and borough is Queensboro Brg in?
