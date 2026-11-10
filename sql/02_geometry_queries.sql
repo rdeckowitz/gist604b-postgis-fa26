@@ -126,5 +126,5 @@ SELECT ST_NumGeometries(geom) as num_coney_island_polygons from nyc_neighborhood
 -- Hint: ORDER BY ST_Length(geom) DESC OR use the alias length_meters
 -- Hint: Use LIMIT 5
 
-
+SELECT name, ST_Length(geom) as length_meters from nyc_streets ORDER by ST_Length(geom) DESC LIMIT 5
 
