@@ -94,7 +94,7 @@ SELECT SUM(ST_Length(geom)) as fifth_ave_length from nyc_streets where name = '5
 
 -- TODO: Write your query below
 
-
+SELECT ST_AsGeoJSON(geom) as soho_geojson from nyc_neighborhoods where name = 'Soho'
 
 
 -- Exercise 7: How many polygons are in the 'Coney Island' multipolygon?
