@@ -108,7 +108,7 @@ SELECT ST_AsGeoJSON(geom) as soho_geojson from nyc_neighborhoods where name = 'S
 -- Hint: Use the nyc_neighborhoods table
 -- Hint: Filter rows where name = 'Coney Island'
 
-
+SELECT ST_NumGeometries(geom) as num_coney_island_polygons from nyc_neighborhoods where name = 'Coney Island'
 
 -- Exercise 8: What are the 5 longest roads in NYC?
 -- Expected output: five rows with road names and lengths in meters
