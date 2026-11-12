@@ -25,8 +25,7 @@ SELECT ST_AsText(geom) as queensboro from nyc_streets where name = 'Queensboro B
 
 -- TODO: Write your query below
 
-
-
+SELECT name AS neighborhood, boroname AS borough FROM nyc_neighborhoods WHERE ST_Intersects(geom, (SELECT geom FROM nyc_streets WHERE name = 'Queensboro Brg'))
 
 -- Exercise 3: What streets does Queensboro Brg intersect with?
 -- Expected output: multiple rows with intersecting street names
