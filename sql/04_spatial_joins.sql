@@ -55,9 +55,7 @@ SELECT DISTINCT n.name as neighborhood_name FROM nyc_neighborhoods AS n JOIN nyc
 
 -- TODO: Write your query below
 
-
-
-
+SELECT SUM(cb.popn_total) as total_population from nyc_census_blocks as cb JOIN nyc_neighborhoods as n on ST_Intersects(cb.geom, n.geom) where n.name = 'Financial District'
 
 -- Exercise 4: What are the population densities (people / km^2) of the 'East Village' and 'West Village'?
 -- Expected output: two rows with neighborhood name and population density per square kilometer
