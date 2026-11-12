@@ -46,7 +46,6 @@ SELECT name AS name FROM nyc_streets WHERE ST_Intersects(geom, (SELECT geom FROM
 -- Edited with the assitance of AI for syntax for including the IS NOT NULL part
 
 
-
 -- Exercise 4: Approximately how many people live within 50 meters of Queensboro Brg?
 -- Expected output: one row with total population
 -- total_population
@@ -59,5 +58,5 @@ SELECT name AS name FROM nyc_streets WHERE ST_Intersects(geom, (SELECT geom FROM
 
 -- TODO: Write your query below
 
-
+SELECT SUM(popn_total) AS total_population FROM nyc_census_blocks WHERE ST_DWithin(geom, (SELECT geom FROM nyc_streets WHERE name = 'Queensboro Brg'), 50)
 
